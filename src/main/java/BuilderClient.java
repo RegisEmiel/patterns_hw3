@@ -21,5 +21,22 @@ public class BuilderClient {
         }
 
         System.out.println(user);
+
+        user = null;
+        try {
+            user = ub
+                    .setId(1l)
+                    .setName("")
+                    .setPassword("12345678")
+                    .setSex(1)
+                    .setEmail("petya@gmail.com")
+                    .setBirthday(new GregorianCalendar(1980, Calendar.JANUARY , 1).getTime())
+                    .setRegistrationDate()
+                    .build();
+        } catch (LoginPasswordEmptyException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(user);
     }
 }
