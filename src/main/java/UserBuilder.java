@@ -9,7 +9,6 @@ public class UserBuilder implements IUserBuilder {
     private Date birthday;
     private Date registrationDate;
 
-    // Build
     public UserBuilder() {
         super();
     }
